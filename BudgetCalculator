@@ -1,0 +1,18 @@
+public class BudgetCalculator {
+    private int[] staffCounts = {10, 10, 25};
+    public double calculateButget(int deptIndex, int butget){
+        try {
+            int count = staffCounts[deptIndex];
+            return (double) butget/count;
+        } catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Lỗi! Mã phòng ban không tồn tại trong hệ thống!");
+            return 0;
+        } catch (ArithmeticException e){
+            System.out.println("Lỗi! Phòng ban chưa có nhân sự, không thể chia cho 0!");
+            return 0;
+        }catch (Exception e){
+            System.out.println("Lỗi không xác định: "+e.getMessage());
+            return 0;
+        }
+    }
+}
