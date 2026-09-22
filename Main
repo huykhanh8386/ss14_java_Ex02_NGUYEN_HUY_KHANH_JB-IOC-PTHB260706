@@ -1,0 +1,8 @@
+public class Main {
+    static void main(String[] args) {
+        BudgetCalculator budgetCalculator = new BudgetCalculator();
+        System.out.println("TH1: " + budgetCalculator.calculateButget(0, 1000000));
+        System.out.println("TH2:" + budgetCalculator.calculateButget(1, 5000000));
+        System.out.println("Th3: " + budgetCalculator.calculateButget(9, 5000000));
+    }
+}
